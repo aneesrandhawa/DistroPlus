@@ -1,0 +1,27 @@
+<%- include('../partials/header.ejs') -%>
+
+    <body>
+        <h1>
+            <%=user_detail.user_name%>
+        </h1>
+        <button class="buy-1"> <a href="http://localhost:3000/auth/logout/">Logout</a> </button>
+
+        <div class="gallery">
+
+            <% result.forEach((e)=>{ %>
+                <div class="content">
+                    <img src="<%=e.cat_img%>">
+                    <h3>
+                        <%=e.cat_name%>
+                    </h3>
+
+                    <button class="buy-1"> <a href="/<%=e.cat_id%>/products">See More</a> </button>
+                </div>
+
+                <% }) %>
+
+        </div>
+
+
+    </body>
+    <%- include('../partials/footer') -%>

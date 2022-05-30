@@ -1,0 +1,27 @@
+<%- include('../partials/header.ejs') -%>
+
+    <body>
+
+        <div class="gallery">
+            <% result.products.forEach((e)=>{ %>
+                <div class="content">
+                    <img src="<%=e.pro_desc%>">
+                    <!-- <img src="<%=e.pro_desc.slice(3)%>"> -->
+
+                    <h3>
+                        <%=e.pro_name%>
+
+                    </h3>
+
+                    <button class="buy-1"> <a href="/products/<%=e.pro_id%>">See More</a> </button>
+                </div>
+
+                <% }) %>
+
+        </div>
+
+
+
+
+    </body>
+    <%- include('../partials/footer') -%>
